@@ -15,7 +15,7 @@ form.addEventListener('click',(e)=>{
     error.textContent = 'Location: Loading...';
     message.textContent = 'Temparature: loading...';
 
-    fetch('http://localhost:3000/weather?address=' + location).then((respnse)=>{
+    fetch('/weather?address=' + location).then((respnse)=>{
     respnse.json().then((data)=>{
         if(data.error){
             message.textContent = data.error;
